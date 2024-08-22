@@ -1,7 +1,8 @@
 # listen to events --> on --> type of event
 name: wk_1
 # parallel actions
-on: push
+on: 
+  workflow-dispatch:
 
 jobs:
   J01:

@@ -1,0 +1,13 @@
+# listen to events --> on --> type of event
+name: wk_1
+# parallel actions
+on: push
+jobs:
+  J01:
+  # vm -- container -- expired in 10 mins
+    runs-on:   ubuntu-latest
+    steps:
+      - name: Welcome
+      run: echo "Welcome to your first action"
+
+

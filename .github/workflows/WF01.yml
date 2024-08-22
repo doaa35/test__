@@ -2,6 +2,7 @@
 name: wk_1
 # parallel actions
 on: 
+  push:
   workflow-dispatch:
 
 jobs:
@@ -9,15 +10,20 @@ jobs:
   # vm -- container -- expired in 10 mins
     runs-on:   ubuntu-latest
     steps:
-      - name: Welcome
+
+      -name: checkout
+        uses: actions/checkout@v4.1.7
+        
+      -name: Welcome
         run: echo "Welcome to your first action"
 
-      - name: sc
+
+      -name: sc
         run:
           |
           chmod +x script.sh
           script.sh
 
 
-      # - name: install cowsay program
+      # -name: install cowsay program
       #   run: sudo apt-get install cowsay -y
